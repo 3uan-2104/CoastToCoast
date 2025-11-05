@@ -1,0 +1,366 @@
+/* style.css - Main stylesheet */
+
+@font-face {
+    font-family: 'Zalando Sans Semi Expanded';
+    src: url('assets/Zalando_Sans_SemiExpanded/ZalandoSansSemiExpanded-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Zalando Sans Semi Expanded', Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;   /* ensure body handles vertical scrolling only */
+}
+
+.banner-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width : 100%;
+    z-index: 100;
+    padding: 16px;
+    background-color: #ccdde4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-spacer {
+    height: 96px;
+    width: 100%;
+}
+
+.banner-left,
+.banner-right {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.banner-left {
+    justify-content: flex-start;
+}
+
+.banner-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.banner-right {
+    justify-content: flex-end;
+}
+
+.banner-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none; /* remove underline on links */
+    color: inherit;        /* inherit text color */
+}
+
+.banner-button:hover .banner-text {
+    text-decoration: underline;
+}
+
+.banner-text {
+    margin: 0 10px;
+    font-size: 18px;
+    color: #574134;
+}
+
+.banner-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.menu-icon {
+    width : 97px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.banner-logo {
+    max-width: 100%;
+    max-height: 64px;
+    display: block;
+}
+
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1002; 
+  top: 0; 
+  left: 0;
+  background-color: #6f594c; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #727272;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+.img-tile-wrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: block;
+    background: transparent;
+    z-index: 2;
+}
+
+.img-tile {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1); /* Smoother fade */
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.img-tile.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.img-tile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    backface-visibility: hidden;
+    will-change: filter;
+}
+
+.img-tile-text,
+.img-tile-subtext,
+.img-tile-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    width: 90%;
+    z-index: 2;
+}
+
+.img-tile-text {
+    top: 40%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.img-tile-subtext {
+    top: 50%;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.img-tile-button {
+    top: 62%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-tile-button-text {
+    background: #574134;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.2s;
+}
+
+.img-tile-wrapper:hover .img-tile-img {
+    filter : brightness(70%);
+    transition: filter 0.5s;
+}
+
+.img-tile-button-text:hover {
+    background: #7a5c44;
+}
+
+.img-tile-indicators {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 32px;
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+}
+
+.img-tile-indicator-bar {
+    width: 70px;           /* Increased width */
+    height: 8px;           /* Slightly taller for visibility */
+    background: rgba(255,255,255,0.4);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-tile-indicator-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: #fff;
+    border-radius: 4px;
+    transition: width 0.2s linear;
+    position: absolute;
+    left: 0; top: 0;
+    will-change: width;
+}
+
+.minishop-wrapper {
+    width: 100%;
+    /* remove fixed height to prevent an inner scrollbar;
+       allow the section to grow with its content */
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 40px;
+    box-sizing: border-box;
+    background: transparent;
+    align-items: center;
+    justify-items: center;
+    overflow: visible; /* ensure no internal scrolling */
+}
+
+.minishop-tile {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px;
+    width: 100%;
+    max-width: 260px;
+    min-width: 0;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s;
+}
+
+.minishop-tile:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+
+.minishop-img {
+    width: 120px;
+    height: 120px;
+    background: #ddd url('assets/placeholder.png') center/cover no-repeat;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.minishop-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #574134;
+    text-align: center;
+}
+
+.minishop-price {
+    font-size: 1rem;
+    color: #7a5c44;
+    font-weight: 500;
+    text-align: center;
+}
+
+.minishop-header {
+    grid-column: 1 / -1;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #574134;
+    margin-bottom: 24px;
+    text-align: center;
+    letter-spacing: 1px;
+    background: none;
+    padding: 0;
+}
+
+.title-tile {
+    width: 100%; /* changed from 100vw */
+    /* Subtract the banner height to fill from bottom of banner to bottom of screen */
+    height: calc(100vh - 132px); /* 132px matches .banner-spacer height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+    .minishop-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 900px) {
+    .minishop-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .minishop-wrapper {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        gap: 16px;
+    }
+}
