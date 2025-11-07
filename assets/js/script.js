@@ -1,21 +1,3 @@
-// set CSS var so the banner can avoid covering the browser scrollbar
-function updateScrollbarWidthVar() {
-  // reliable measurement: create a temporary element with forced scrollbars
-  const scrollDiv = document.createElement('div');
-  scrollDiv.style.width = '100px';
-  scrollDiv.style.height = '100px';
-  scrollDiv.style.overflow = 'scroll';
-  scrollDiv.style.position = 'absolute';
-  scrollDiv.style.top = '-9999px';
-  document.body.appendChild(scrollDiv);
-  const scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
-  document.body.removeChild(scrollDiv);
-
-  document.documentElement.style.setProperty('--scrollbar-width', `${Math.max(0, scrollbarWidth)}px`);
-}
-
-window.addEventListener('resize', updateScrollbarWidthVar);
-
 /* Set the width of the side navigation to 250px */
 function openNav() {
   document.getElementById("sidenav").style.width = "250px";

@@ -1,0 +1,64 @@
+/* shop.css - Styles for the shop page */
+
+
+.catalog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    margin-bottom: 100px;
+    flex-direction: column;
+}
+
+.catalog-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #574134;
+}
+
+.catalog-button {
+    position: relative;
+    width: 75%;
+    height: 200px;
+    display: block;
+    flex-direction: column;
+    margin: 0;
+    padding: 10px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    background: transparent;
+}
+
+.catalog-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    backface-visibility: hidden;
+    will-change: filter;
+}
+
+.catalog-img:hover {
+    filter : brightness(70%);
+    transition: filter 0.5s;
+}
+
+.catalog-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    width: 90%;
+    z-index: 2;
+    top: 40%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
