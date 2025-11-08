@@ -1,0 +1,112 @@
+{
+    "categories": [
+        {
+            "id": "c01",
+            "name": "Exeter School - Grease",
+            "description": "This is a test category.",
+            "img": "assets/images/insert_image.jpg",
+            "products": [
+                {
+                    "id": "p101",
+                    "name": "Test Product 1",
+                    "price": 1.99,
+                    "img": "assets/images/insert_image.jpg",
+                    "inStock": true
+                },
+                {
+                    "id": "p102",
+                    "name": "Test Product 2",
+                    "price": 2.99,
+                    "img": "assets/images/insert_image.jpg",
+                    "inStock": true
+                },
+                {
+                    "id": "p103",
+                    "name": "Test Product 3",
+                    "price": 3.99,
+                    "img": "assets/images/insert_image.jpg",
+                    "inStock": false
+                },
+                {
+                    "id": "p104",
+                    "name": "Test Product 4",
+                    "price": 4.99,
+                    "img": "assets/images/insert_image.jpg",
+                    "inStock": true
+                }
+            ]
+        },
+        {
+            "id": "c02",
+            "name": "Winter Drop",
+            "description": "This is a test category.",
+            "img": "assets/images/insert_image.jpg",
+            "products": [
+                {
+                    "id": "p201",
+                    "name": "Test Product 1",
+                    "price": 1.99,
+                    "img": "assets/images/insert_image.jpg",
+                    "inStock": true
+                },
+                {
+                    "id": "p202",
+                    "name": "Test Product 2",
+                    "price": 2.99,
+                    "img": "assets/images/insert_image.jpg",
+                    "inStock": true
+                },
+                {
+                    "id": "p203",
+                    "name": "Test Product 3",
+                    "price": 3.99,
+                    "img": "assets/images/insert_image.jpg",
+                    "inStock": false
+                },
+                {
+                    "id": "p204",
+                    "name": "Test Product 4",
+                    "price": 4.99,
+                    "img": "assets/images/insert_image.jpg",
+                    "inStock": true
+                }
+            ]
+        },
+        {
+            "id": "c03",
+            "name": "Resin Designs",
+            "description": "This is a test category.",
+            "img": "assets/images/insert_image.jpg",
+            "products": [
+                {
+                    "id": "p301",
+                    "name": "Test Product 1",
+                    "price": 1.99,
+                    "img": "assets/images/insert_image.jpg",
+                    "inStock": true
+                },
+                {
+                    "id": "p302",
+                    "name": "Test Product 2",
+                    "price": 2.99,
+                    "img": "assets/images/insert_image.jpg",
+                    "inStock": true
+                },
+                {
+                    "id": "p303",
+                    "name": "Test Product 3",
+                    "price": 3.99,
+                    "img": "assets/images/insert_image.jpg",
+                    "inStock": false
+                },
+                {
+                    "id": "p304",
+                    "name": "Test Product 4",
+                    "price": 4.99,
+                    "img": "assets/images/insert_image.jpg",
+                    "inStock": true
+                }
+            ]
+        }
+    ]
+}

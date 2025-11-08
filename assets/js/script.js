@@ -111,3 +111,45 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+
+// populate sidenav with categories from data/products.json
+async function populateSidenavCategories() {
+    const sidenav = document.getElementById('sidenav');
+    if (!sidenav) return;
+
+    try {
+        const resp = await fetch('data/products.json');
+        if (!resp.ok) throw new Error('Failed to fetch data/products.json');
+        const data = await resp.json();
+        const categories = Array.isArray(data.categories) ? data.categories : [];
+        if (categories.length === 0) return;
+
+        // separator + heading
+        const sep = document.createElement('hr');
+        sep.className = 'sidenav-sep';
+        sidenav.appendChild(sep);
+
+        const heading = document.createElement('div');
+        heading.className = 'sidenav-section';
+        heading.textContent = 'Product Categories';
+        sidenav.appendChild(heading);
+
+        categories.forEach(cat => {
+            const a = document.createElement('a');
+            a.href = `category.html?id=${encodeURIComponent(cat.id)}`;
+            a.textContent = cat.name || cat.id || 'Category';
+            a.addEventListener('click', () => {
+                // ensure sidenav closes on navigation
+                closeNav();
+            });
+            sidenav.appendChild(a);
+        });
+    } catch (err) {
+        console.error('populateSidenavCategories error:', err);
+    }
+}
+
+// run on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+    populateSidenavCategories();
+});

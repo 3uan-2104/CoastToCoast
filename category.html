@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Coast to Coast</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/css/style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/css/shop.css'>
+</head>
+
+<body>
+    <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">ToC's</a>
+    </div>
+
+    <div class="banner-wrap">
+        <div class="banner-left">
+            <div class="banner-button" onclick="openNav()">
+                <img src="assets/images/menu.png" class="banner-icon" alt="menu">
+                <span class="banner-text">Menu</span>
+            </div>
+        </div>
+
+        <a href="index.html" class="banner-center banner" aria-label="Home">
+            <img src="assets/images/logo.png" alt='Coast to Coast Logo' class="banner-logo">
+        </a>
+
+        <div class="banner-right banner">
+            <a href="catalog.html" class="banner-button">
+                <span class="banner-text">Shop</span>
+                <img src="assets/images/shopping-cart.png" class="banner-icon" alt="shop">
+            </a>
+            <a href="about.html" class="banner-button">
+                <span class="banner-text">About</span>
+                <img src="assets/images/invoice.png" class="banner-icon" alt="about">
+            </a>
+            <a href="contact.html" class="banner-button">
+                <span class="banner-text">Contact</span>
+                <img src="assets/images/mail.png" class="banner-icon" alt="contact">
+            </a>
+        </div>
+    </div>
+
+    <div class="banner-spacer"></div>
+
+    <!-- Container that category.js will populate -->
+    <div class="shop-panel-container" aria-live="polite">
+        <!-- content injected by assets/js/category.js -->
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/category.js"></script>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <span class="footer-text">Website by Euan Jones.</span>
+        <span class="footer-text">© 2025 Coast to Coast. All rights reserved.</span>
+    </div>
+</footer>
+</html>
