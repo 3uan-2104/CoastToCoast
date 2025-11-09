@@ -31,20 +31,28 @@ document.addEventListener('DOMContentLoaded', async () => {
         container.appendChild(header);
 
         (category.products || []).forEach(prod => {
-            if (!prod.inStock) return; // Skip out-of-stock products
-            
             const tile = document.createElement('a');
             tile.className = 'shop-panel-tile';
             tile.href = `product.html?id=${encodeURIComponent(prod.id)}`;
             tile.setAttribute('aria-label', prod.name || 'Product');
 
-            const imgSrc = prod.image || 'assets/images/insert_image.jpg';
-            const price = (prod.price !== undefined && !isNaN(prod.price)) ? `£${Number(prod.price).toFixed(2)}` : '';
+            // use a consistent image property (prod.img or prod.image in your JSON)
+            const imgSrc = prod.img || prod.image || 'assets/images/insert_image.jpg';
+
+            // define price once and assign based on stock
+            let priceText = '';
+            if (prod.inStock === false) {
+                priceText = '<b>Out of Stock</b>';
+            } else {
+                priceText = (prod.price !== undefined && !isNaN(prod.price))
+                    ? `£${Number(prod.price).toFixed(2)}`
+                    : '';
+            }
 
             tile.innerHTML = `
-                <img class="shop-panel-img" src="${escapeHtml(prod.img || 'assets/images/insert_image.jpg')}" alt="${escapeHtml(prod.name || 'Product')}">
+                <img class="shop-panel-img" src="${escapeHtml(imgSrc)}" alt="${escapeHtml(prod.name || 'Product')}">
                 <div class="shop-panel-name">${escapeHtml(prod.name || '')}</div>
-                <div class="shop-panel-price">${escapeHtml(price)}</div>
+                <div class="shop-panel-price">${priceText}</div>
             `;
             container.appendChild(tile);
         });

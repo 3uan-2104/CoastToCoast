@@ -2,36 +2,44 @@
     "categories": [
         {
             "id": "c01",
-            "name": "Exeter School - Grease",
+            "name": "Exeter School Products",
             "description": "This is a test category.",
             "img": "assets/images/insert_image.jpg",
             "products": [
                 {
                     "id": "p101",
-                    "name": "Test Product 1",
-                    "price": 1.99,
+                    "name": "Main Building Pop-Art",
+                    "price": 3.00,
+                    "description": "Main Building at Exeter School\n Art by Alex Freemantle",
                     "img": "assets/images/insert_image.jpg",
+                    "deals": ["do1"],
                     "inStock": true
                 },
                 {
                     "id": "p102",
-                    "name": "Test Product 2",
-                    "price": 2.99,
+                    "name": "Grease Production - Sandy",
+                    "price": 3.00,
+                    "description": "Memorabilia for the 2025 Grease Production at Exeter School\nDepicted Character: Sandy\nArt by Emma Thompson",
                     "img": "assets/images/insert_image.jpg",
+                    "deals": ["do1"],
                     "inStock": true
                 },
                 {
                     "id": "p103",
-                    "name": "Test Product 3",
-                    "price": 3.99,
+                    "name": "Grease Production - Sunset Car Ride",
+                    "price": 3.00,
+                    "description": "Memorabilia for the 2025 Grease Production at Exeter School\nDepicted Scene: Sunset Car Ride\nArt by Emma Thompson",
                     "img": "assets/images/insert_image.jpg",
-                    "inStock": false
+                    "deals": ["do1"],
+                    "inStock": true
                 },
                 {
                     "id": "p104",
-                    "name": "Test Product 4",
-                    "price": 4.99,
+                    "name": "Grease Production - Danny",
+                    "price": 3.00,
+                    "description": "Memorabilia for the 2025 Grease Production at Exeter School\nDepicted Character: Danny\nArt by Emma Thompson",
                     "img": "assets/images/insert_image.jpg",
+                    "deals": ["do1"],
                     "inStock": true
                 }
             ]
@@ -39,36 +47,44 @@
         {
             "id": "c02",
             "name": "Winter Drop",
-            "description": "This is a test category.",
+            "description": "",
             "img": "assets/images/insert_image.jpg",
             "products": [
                 {
                     "id": "p201",
                     "name": "Test Product 1",
                     "price": 1.99,
+                    "description": "This is a test product.",
                     "img": "assets/images/insert_image.jpg",
-                    "inStock": true
+                    "deals": [],
+                    "inStock": false
                 },
                 {
                     "id": "p202",
                     "name": "Test Product 2",
                     "price": 2.99,
+                    "description": "This is a test product.",
                     "img": "assets/images/insert_image.jpg",
-                    "inStock": true
+                    "deals": [],
+                    "inStock": false
                 },
                 {
                     "id": "p203",
                     "name": "Test Product 3",
                     "price": 3.99,
+                    "description": "This is a test product.",
                     "img": "assets/images/insert_image.jpg",
+                    "deals": [],
                     "inStock": false
                 },
                 {
                     "id": "p204",
                     "name": "Test Product 4",
                     "price": 4.99,
+                    "description": "This is a test product.",
                     "img": "assets/images/insert_image.jpg",
-                    "inStock": true
+                    "deals": [],
+                    "inStock": false
                 }
             ]
         },
@@ -82,31 +98,48 @@
                     "id": "p301",
                     "name": "Test Product 1",
                     "price": 1.99,
+                    "description": "This is a test product.",
                     "img": "assets/images/insert_image.jpg",
+                    "deals": [],
                     "inStock": true
                 },
                 {
                     "id": "p302",
                     "name": "Test Product 2",
                     "price": 2.99,
+                    "description": "This is a test product.",
                     "img": "assets/images/insert_image.jpg",
+                    "deals": [],
                     "inStock": true
                 },
                 {
                     "id": "p303",
                     "name": "Test Product 3",
                     "price": 3.99,
+                    "description": "This is a test product.",
                     "img": "assets/images/insert_image.jpg",
+                    "deals": [],
                     "inStock": false
                 },
                 {
                     "id": "p304",
                     "name": "Test Product 4",
                     "price": 4.99,
+                    "description": "This is a test product.",
                     "img": "assets/images/insert_image.jpg",
+                    "deals": [],
                     "inStock": true
                 }
             ]
+        }
+    ],
+
+    "deals":[
+        {
+            "id": "do1",
+            "type": "bySet",
+            "requiredQty": 4,
+            "setPrice": 10.00
         }
     ]
 }

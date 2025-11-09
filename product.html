@@ -14,35 +14,25 @@
     <div id="sidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="index.html">Home</a>
+        <a href="catalog.html">Products</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="#">ToC's</a>
     </div>
 
-    <div class="banner-wrap">
-        <div class="banner-left">
-            <div class="banner-button" onclick="openNav()">
-                <img src="assets/images/menu.png" class="banner-icon" alt="menu">
-                <span class="banner-text">Menu</span>
+<div class="banner-wrap">
+        <div class = "banner-left">
+            <div class = "banner-button" onclick="openNav()">
+                <img src="assets/images/menu.png" class="banner-icon">
+                <span class = "banner-text">Menu</span>
             </div>
         </div>
-
-        <a href="index.html" class="banner-center banner" aria-label="Home">
+        <a href="index.html" class="banner-center banner">
             <img src="assets/images/logo.png" alt='Coast to Coast Logo' class="banner-logo">
         </a>
-
-        <div class="banner-right banner">
-            <a href="catalog.html" class="banner-button">
-                <span class="banner-text">Shop</span>
-                <img src="assets/images/shopping-cart.png" class="banner-icon" alt="shop">
-            </a>
-            <a href="about.html" class="banner-button">
-                <span class="banner-text">About</span>
-                <img src="assets/images/invoice.png" class="banner-icon" alt="about">
-            </a>
-            <a href="contact.html" class="banner-button">
-                <span class="banner-text">Contact</span>
-                <img src="assets/images/mail.png" class="banner-icon" alt="contact">
+        <div class = "banner-right banner">
+            <a href="cart.html" class = "banner-button">
+                <span class = "banner-text">Basket</span>
+                <img src="assets/images/shopping-cart.png" class="banner-icon">
             </a>
         </div>
     </div>
@@ -56,11 +46,19 @@
 
         <aside class="product-info">
             <h1 id="product-name">Sample Product Name</h1>
-            <div id="product-price" class="product-price">£9.99</div>
 
-            <a id="buy-button" class="buy-button" href="#" role="button" aria-label="Buy product">
-                Buy now
-            </a>
+            <div class="product-price-block">
+                <div id="product-price" class="product-price">£0.00</div>
+                <div id="product-total-price" class="product-total-price">Total: £0.00</div>
+            </div>
+
+            <div class="product-purchase-controls">
+                <label for="quantity" class="quantity-label">Quantity</label>
+                <input id="quantity" class="quantity-input" type="number" min="1" value="1" inputmode="numeric" aria-label="Quantity">
+                <a id="buy-button" class="buy-button" href="#" role="button" aria-label="Add to basket">
+                    Add to basket
+                </a>
+            </div>
 
             <section id="product-description" class="product-description">
                 <h2>Description</h2>
@@ -79,7 +77,7 @@
         </div>
     </footer>
 
-    <!-- optional: product script to populate by id later -->
+    <script src="assets/js/cart.js" defer></script>
     <script src="assets/js/product.js" defer></script>
 </body>
 </html>
